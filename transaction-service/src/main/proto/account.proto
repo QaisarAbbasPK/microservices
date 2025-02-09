@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package account;
+
+option java_multiple_files = true;
+option java_package = "com.qaisarabbas.transaction_service.grpc";
+option java_outer_classname = "AccountProto";
+
+service AccountService {
+  rpc GetAccountByNumber (AccountRequest) returns (AccountResponse);
+}
+
+message AccountRequest {
+  string accountNumber = 1;
+}
+
+message AccountResponse {
+  string firstName = 1;
+  string lastName = 2;
+  string email = 3;
+  string phoneNumber = 4;
+  string accountNumber = 5;
+  string address = 6;
+  string identificationNumber = 7;
+  string profession = 8;
+  string salary = 9;
+  string bankAccountType = 10;
+  string city = 11;
+  string country = 12;
+  bool active = 13;
+}
